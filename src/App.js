@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import foodData from './data/data.js';
 import './App.css';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
@@ -43,14 +42,12 @@ function App() {
   );
   const [recipeID, setRecipeID] = useState('716429');
 
-  console.log('food data is......', foodData[0]);
+  //  console.log('food data is......', foodData[0]);
 
   return (
-
-    <div className="App">
-       <NavBar />
-       <Home />   
-
+    <div className='App'>
+      <NavBar />
+      <Home />
     </div>
   );
 }

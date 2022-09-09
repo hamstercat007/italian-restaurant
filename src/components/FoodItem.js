@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-export default function FoodItem() {
+export default function FoodItem({ title, image }) {
   return (
-    <div>FoodItem</div>
-  )
+    <div>
+      <h3>{title}</h3>
+      <img src={image} alt='food'></img>
+    </div>
+  );
 }
