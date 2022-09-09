@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flex, Spacer, Image, Button, Box } from '@chakra-ui/react';
+import FoodModal from './FoodModal';
 
 
 export default function FoodItem({ title, image, price }) {
@@ -13,10 +14,12 @@ export default function FoodItem({ title, image, price }) {
 
           <Box p='2'>
           <p>{price}</p>
-          <Button colorScheme='blue'>Order</Button>
+         
+          <FoodModal title={title} price={price} />
           </Box>
 
       </Flex>
+
     </div>
   );
 }
