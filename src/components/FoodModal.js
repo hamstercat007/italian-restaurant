@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 // import useCart from "./Cart";
 
-import { createRef, useState } from "react";
+import { useState } from "react";
 
 export default function FoodModal({ title, price }) {
   const { isOpen, onOpen, onClose } = useDisclosure();

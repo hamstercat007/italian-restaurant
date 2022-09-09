@@ -1,4 +1,3 @@
-import NavBar from "./NavBar";
 import foodData from "../data/data.js";
 import FoodItem from "./FoodItem";
 import { Text } from "@chakra-ui/react";
