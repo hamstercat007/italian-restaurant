@@ -6,10 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from './components/Menu';
 import Checkout from './components/Checkout';
+import { ChakraProvider } from '@chakra-ui/react'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <ChakraProvider>
   <React.StrictMode>
   <BrowserRouter >
   <Routes>
@@ -19,6 +21,7 @@ root.render(
          </Routes>
     </BrowserRouter>
   </React.StrictMode>
+  </ChakraProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
