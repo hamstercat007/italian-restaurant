@@ -1,12 +1,9 @@
-
 import { useState, useEffect } from 'react';
 import foodData from './data/data.js';
-import {useState} from 'react'
 import './App.css';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
-
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 /*
 //https://api.spoonacular.com/recipes/637672/information?apiKey=6e9b03c30e5e4bdeaa8e5428fb3062dd
@@ -24,49 +21,47 @@ desert
 663351 - The Ultimate Tiramisu
 633415 - Baked Alaska
 1697581 - Crème Brûlée
-*/ 
-  //API Key: 6e9b03c30e5e4bdeaa8e5428fb3062dd
-  const [foodImage, setFoodImage] = useState('https://livingstonbagel.com/wp-content/uploads/2016/11/food-placeholder.jpg')
-  const [recipeID, setRecipeID] = useState('716429')
-  
-  console.log('food data is......', foodData[0])
+*/
+//API Key: 6e9b03c30e5e4bdeaa8e5428fb3062dd
+// async function fetchFood(){
 
-  // async function fetchFood(){
+//   const response = await fetch(`https://api.spoonacular.com/recipes/637672/information?apiKey=e1833e085ad04e5583a2f8409022c612`);
+// const data = await response.json();
+// console.log('food info', data)
+// setFoodData(data)
+// console.log(data)
+// }
 
-
-  //   const response = await fetch(`https://api.spoonacular.com/recipes/637672/information?apiKey=e1833e085ad04e5583a2f8409022c612`);
-  // const data = await response.json();
-  // console.log('food info', data)
-  // setFoodData(data)
-  // console.log(data)
-  // }
-
-  // useEffect(() => {
-  //   fetchFood()
+// useEffect(() => {
+//   fetchFood()
 
 function App() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
+  const [foodImage, setFoodImage] = useState(
+    'https://livingstonbagel.com/wp-content/uploads/2016/11/food-placeholder.jpg'
+  );
+  const [recipeID, setRecipeID] = useState('716429');
 
-  
+  console.log('food data is......', foodData[0]);
 
   return (
-    <div className="App">
-
-
+    <div className='App'>
       <nav
         style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
+          borderBottom: 'solid 1px',
+          paddingBottom: '1rem',
         }}
       >
-      <Link style={{margin:"5px"}} to ="/">Home</Link>
-      <Link style={{margin:"5px"}} to ="/menu">Menu</Link>
-       </nav>
-       <Home />   
+        <Link style={{ margin: '5px' }} to='/'>
+          Home
+        </Link>
+        <Link style={{ margin: '5px' }} to='/menu'>
+          Menu
+        </Link>
+      </nav>
+      <Home />
     </div>
   );
 }
 
-
 export default App;
-
