@@ -1,11 +1,15 @@
+
 import { useState, useEffect } from 'react';
 import foodData from './data/data.js';
+import {useState} from 'react'
+import './App.css';
+import Home from './components/Home';
+import NavBar from './components/NavBar';
+import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 
-export default function App() {
+
 /*
-
-https://api.spoonacular.com/recipes/637672/information?apiKey=6e9b03c30e5e4bdeaa8e5428fb3062dd
-
+//https://api.spoonacular.com/recipes/637672/information?apiKey=6e9b03c30e5e4bdeaa8e5428fb3062dd
 starters 
 637672 - Cheesy Picante Beef Macaroni
 658753 - Roma Tomato Bruschetta
@@ -23,7 +27,6 @@ desert
 */ 
   //API Key: 6e9b03c30e5e4bdeaa8e5428fb3062dd
   const [foodImage, setFoodImage] = useState('https://livingstonbagel.com/wp-content/uploads/2016/11/food-placeholder.jpg')
-  // const [foodData, setFoodData] = useState({})
   const [recipeID, setRecipeID] = useState('716429')
   
   console.log('food data is......', foodData[0])
@@ -40,13 +43,30 @@ desert
 
   // useEffect(() => {
   //   fetchFood()
-    
-  // }, [])
+
+function App() {
+  const [data, setData] = useState([])
+
   
 
   return (
     <div className="App">
-      <img src={foodImage}/>
+
+
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+      <Link style={{margin:"5px"}} to ="/">Home</Link>
+      <Link style={{margin:"5px"}} to ="/menu">Menu</Link>
+       </nav>
+       <Home />   
     </div>
   );
 }
+
+
+export default App;
+
