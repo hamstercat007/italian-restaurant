@@ -5,6 +5,7 @@ export default function FoodItem({ title, image }) {
     <div>
       <h3>{title}</h3>
       <img src={image} alt='food'></img>
+      <p>{image}</p>
     </div>
   );
 }

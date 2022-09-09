@@ -9,7 +9,7 @@ export default function Menu() {
       <NavBar />
       <div>Menu</div>
       {foodData.map((e) => {
-        return <FoodItem title={e.title} image={e.sourceUrl}></FoodItem>;
+        return <FoodItem title={e.title} image={e.image}></FoodItem>;
       })}
     </>
   );
