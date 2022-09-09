@@ -1,7 +1,8 @@
-import React from "react";
 import italianFoods from "./italian-foods.jpeg"
+import {useState} from 'react'
 
 function Home() {
+
   return (
     <div>
       <h1>Welcome to HackItalian</h1>

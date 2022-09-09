@@ -14,6 +14,7 @@ export default function Menu() {
             title={e.title}
             image={e.image}
             price={e.pricePerServing}
+            key={e.id}
           ></FoodItem>
         );
       })}

@@ -37,6 +37,7 @@ desert
 
 function App() {
   const [data, setData] = useState([]);
+
   const [foodImage, setFoodImage] = useState(
     'https://livingstonbagel.com/wp-content/uploads/2016/11/food-placeholder.jpg'
   );
