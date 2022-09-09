@@ -9,7 +9,13 @@ export default function Menu() {
       <NavBar />
       <div>Menu</div>
       {foodData.map((e) => {
-        return <FoodItem title={e.title} image={e.image}></FoodItem>;
+        return (
+          <FoodItem
+            title={e.title}
+            image={e.image}
+            price={e.pricePerServing}
+          ></FoodItem>
+        );
       })}
     </>
   );
