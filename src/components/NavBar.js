@@ -1,30 +1,19 @@
-// import React from "react";
-// import {
-//   Menu,
-//   MenuButton,
-//   MenuList,
-//   MenuItem,
-//   MenuItemOption,
-//   MenuGroup,
-//   MenuOptionGroup,
-//   MenuDivider,
-// } from "@chakra-ui/react";
+import React from "react";
+import {Link} from "react-router-dom";
 
-// function NavBar() {
-//   return <div>
-//     <Menu>
-//   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-//     Actions
-//   </MenuButton>
-//   <MenuList>
-//     <MenuItem>Download</MenuItem>
-//     <MenuItem>Create a Copy</MenuItem>
-//     <MenuItem>Mark as Draft</MenuItem>
-//     <MenuItem>Delete</MenuItem>
-//     <MenuItem>Attend a Workshop</MenuItem>
-//   </MenuList>
-// </Menu>
-//   </div>;
-// }
+function NavBar() {
+  return <div>
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+      <Link style={{margin:"5px"}} to ="/">Home</Link>
+      <Link style={{margin:"5px"}} to ="/menu">Menu</Link>
+      <Link style={{margin:"5px"}} to ="/checkout">Checkout</Link>
+       </nav>
+  </div>;
+}
 
-// export default NavBar;
+export default NavBar;

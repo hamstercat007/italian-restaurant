@@ -2,7 +2,6 @@ import {useState} from 'react'
 import './App.css';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 
 
 function App() {
@@ -17,15 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      >
-      <Link style={{margin:"5px"}} to ="/">Home</Link>
-      <Link style={{margin:"5px"}} to ="/menu">Menu</Link>
-       </nav>
+       <NavBar />
        <Home />   
     </div>
   );
