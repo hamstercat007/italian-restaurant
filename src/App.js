@@ -9,7 +9,7 @@ function App() {
   //Routes act like a switch statement, showing sections of the page.
   return (
     <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
       <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />

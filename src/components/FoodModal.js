@@ -9,27 +9,22 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
-// import useCart from "./Cart";
 
 import { useState } from "react";
+import {useCartContext} from "./context/CartContext.js"
 
 export default function FoodModal({ title, price }) {
+  const { addItemToBasket } = useCartContext()
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [number, setNumber] = useState(1);
+  const [quantity, setQuantity] = useState(1);
 
   function incrementQuantity() {
-    setNumber(number + 1);
+    setQuantity(quantity + 1);
   }
 
   function decrementQuantity() {
-    setNumber(number - 1);
+    setQuantity(quantity - 1);
   }
-
-  // function addItem() {
-  //   let total = price*number
-  //   let item = {name: title, quantity: number, price: total}
-  //   setCart([...cart, item])
-  // }
 
   return (
     <>
@@ -50,11 +45,17 @@ export default function FoodModal({ title, price }) {
               Close
             </Button>
             <Button onClick={incrementQuantity}>+</Button>
-            {number}
+            {quantity}
             <Button onClick={decrementQuantity}>-</Button>
             <Button
               colorScheme="orange"
               style={{ marginLeft: "10px" }}
+              onClick = {
+                () => {
+                  addItemToBasket({title, price, quantity})
+                  onClose()
+                }
+              }
             >
               Add to Cart
             </Button>

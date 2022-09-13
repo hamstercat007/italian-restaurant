@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Flex, Spacer, Image, Button, Box } from "@chakra-ui/react";
+import {useCartContext} from "./context/CartContext.js"
 
 function NavBar() {
+
+  const {getNumberItems} = useCartContext()
+
   return (
     <div>
       <nav
@@ -28,7 +32,7 @@ function NavBar() {
             Menu
           </Link>
           <Link style={{ margin: "5px" }} to="/checkout">
-            Checkout
+            Checkout {getNumberItems()}
           </Link>
           </Flex>
         </Flex>
