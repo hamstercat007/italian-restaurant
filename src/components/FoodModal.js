@@ -13,10 +13,12 @@ import {
 import { useState } from "react";
 import {useCartContext} from "./context/CartContext.js"
 
-export default function FoodModal({ title, price }) {
+export default function FoodModal({ title, price, id }) {
   const { addItemToBasket } = useCartContext()
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [quantity, setQuantity] = useState(1);
+
+  console.log(id)
 
   function incrementQuantity() {
     setQuantity(quantity + 1);
@@ -52,7 +54,7 @@ export default function FoodModal({ title, price }) {
               style={{ marginLeft: "10px" }}
               onClick = {
                 () => {
-                  addItemToBasket({title, price, quantity})
+                  addItemToBasket({ quantity, id})
                   onClose()
                 }
               }

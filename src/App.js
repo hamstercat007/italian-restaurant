@@ -2,7 +2,7 @@ import "./App.css";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Menu from "./components/Menu";
+import FoodMenu from "./components/FoodMenu";
 import Checkout from "./components/Checkout";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="menu" element={<Menu />} />
+          <Route path="menu" element={<FoodMenu />} />
           <Route path="checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>

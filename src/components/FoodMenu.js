@@ -2,17 +2,18 @@ import foodData from "../data/data.js";
 import FoodItem from "./FoodItem";
 import { Text } from "@chakra-ui/react";
 
-export default function Menu() {
+export default function FoodMenu() {
   return (
     <>
       <Text margin='10' fontSize="5xl">Menu</Text>
-      {foodData.map((e) => {
+      {foodData.map((item) => {
         return (
           <FoodItem
-            title={e.title}
-            image={e.image}
-            price={e.pricePerServing}
-            key={e.id}
+            title={item.title}
+            image={item.image}
+            price={item.pricePerServing}
+            key={item.id}
+            id={item.id}
           ></FoodItem>
         );
       })}
