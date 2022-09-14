@@ -13,12 +13,12 @@ import {
 import { useState } from "react";
 import {useCartContext} from "./context/CartContext.js"
 
+//add quanity and id, get price from the database with the id, as price can be manipulated. 
+
 export default function FoodModal({ title, price, id }) {
   const { addItemToBasket } = useCartContext()
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [quantity, setQuantity] = useState(1);
-
-  console.log(id)
 
   function incrementQuantity() {
     setQuantity(quantity + 1);

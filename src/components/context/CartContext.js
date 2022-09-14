@@ -14,8 +14,8 @@ const CartContextProvider = ({children}) => {
   const getNumberItems = () => cart.length
   
 
-const addItemToBasket = (item) => {
-  setCart([...cart, item])
+const addItemToBasket = (cartItem) => {
+  setCart([...cart, cartItem])
 }
 
   return <CartContext.Provider value = {{cart, addItemToBasket, getNumberItems}}>
