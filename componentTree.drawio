@@ -1,0 +1,31 @@
+<mxfile host="65bd71144e">
+    <diagram id="S1Ooe0CdDdcZ_22nc6G8" name="Page-1">
+        <mxGraphModel dx="1759" dy="425" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="CheckoutList - showing total" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Discount code" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Food Menu - Dishes to order" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Add quantiy, delete quantity" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="220" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="FoodItem" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="CheckoutList Item - show quantity and price" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Create a component called money, and you can do all the money formatting inside out&lt;br&gt;https://www.npmjs.com/package/dinero.js?utm_source=cdnjs&amp;amp;utm_medium=cdnjs_link&amp;amp;utm_campaign=cdnjs_library&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="270" width="140" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -16,7 +16,7 @@ import {useCartContext} from "./context/CartContext.js"
 //add quanity and id, get price from the database with the id, as price can be manipulated. 
 
 export default function FoodModal({ title, price, id }) {
-  const { addItemToBasket } = useCartContext()
+  const { addItemToCart } = useCartContext()
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [quantity, setQuantity] = useState(1);
 
@@ -54,7 +54,7 @@ export default function FoodModal({ title, price, id }) {
               style={{ marginLeft: "10px" }}
               onClick = {
                 () => {
-                  addItemToBasket({ quantity, id})
+                  addItemToCart({ quantity, id})
                   onClose()
                 }
               }
@@ -67,3 +67,5 @@ export default function FoodModal({ title, price, id }) {
     </>
   );
 }
+
+// addItemToBasket({ quantity: quantity, id: id})

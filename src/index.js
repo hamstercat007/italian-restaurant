@@ -7,13 +7,14 @@ import { CartContextProvider } from "./components/context/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <CartContextProvider >
+
   <ChakraProvider>
+    <CartContextProvider >
     <React.StrictMode>
       <App />
     </React.StrictMode>
+    </CartContextProvider>
   </ChakraProvider>
-  </CartContextProvider>
 );
 
 

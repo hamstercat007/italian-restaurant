@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Flex, Spacer, Image, Button, Box } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 import {useCartContext} from "./context/CartContext.js"
 
 function NavBar() {
@@ -25,13 +25,13 @@ function NavBar() {
             src="./logo.png"
           />
           <Flex>
-          <Link style={{ margin: "5px" }} to="/">
+          <Link style={{ margin: "5px", fontSize: "25px"}} to="/">
             Home
           </Link>
-          <Link style={{ margin: "5px" }} to="/menu">
+          <Link style={{ margin: "5px", fontSize: "25px" }} to="/menu">
             Menu
           </Link>
-          <Link style={{ margin: "5px" }} to="/checkout">
+          <Link style={{ margin: "5px", fontSize: "25px" }} to="/checkout">
             Checkout {getNumberItems()}
           </Link>
           </Flex>

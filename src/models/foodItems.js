@@ -1,5 +1,5 @@
 
-//functionality to work with the data, to get item by ID. 
+//functionality to work with the data and db, to get item by ID. 
 //import data
 
 import foodData from "../data/data.js"
