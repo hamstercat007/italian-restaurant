@@ -35,13 +35,7 @@ const CartContextProvider = ({ children }) => {
 
   const removeItemInCart = (foodItem) => {
     console.log(cart);
-    const foundIndex = cart.findIndex(
-      (cartItem) => cartItem.id === foodItem.id
-    );
-
-    // create a new copy of cart to edit freely, splice removes the item from the array.
-    const newCart = cart;
-    newCart.splice(foundIndex, 1);
+    const newCart = cart.filter((cartItem) => cartItem.id !== foodItem.id );
     setCart(newCart);
   };
 
