@@ -1,7 +1,7 @@
 //create Context
 import { createContext, useContext, useState } from "react";
+import { getDiscountCode } from "../../models/discountCodes";
 
-//const [basket, setBasket] = useState([])
 const CartContext = createContext();
 
 const useCartContext = () => {
@@ -16,8 +16,13 @@ const CartContextProvider = ({ children }) => {
   //store the validation of discount code in the context as that's where we are handling the cart
 
   const applyDiscount = (code) => {
-    setDiscountCode(code)
-    
+    const codeintheDB = getDiscountCode(code.toLowerCase()) //if it won't find it, returns null/undefined
+    if (codeintheDB) {
+      setDiscountCode(code)
+      return {outcome: true, message: "Code applied"}
+    } else {
+      return {outcome: false, message: "Code is not recognised, please try again"}
+    }
   }
 
   const getNumberItems = () => cart.length;
@@ -50,7 +55,7 @@ const CartContextProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addItemToCart, getNumberItems, removeItemInCart }}
+      value={{ cart, addItemToCart, getNumberItems, removeItemInCart, applyDiscount, discountCode }}
     >
       {children}
     </CartContext.Provider>

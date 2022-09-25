@@ -1,28 +1,29 @@
 import { useState } from "react";
 import { Button } from "@chakra-ui/react";
+import { useCartContext } from "./context/CartContext";
 
 //https://www.w3schools.com/react/showreact.asp?filename=demo2_react_forms_submit
 
 function Discount() {
   const [code, setCode] = useState("");
+  const [message, setMessage] = useState("")
+  const {applyDiscount} = useCartContext()
+  const [successful, setSuccessful] = useState("")
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (pineapplesoc.test(code)) {
-      document.getElementById("discountCode").innerText = "You can't have both a free pineapple pizza and 50% off - we'll be bankrupt 😠";
-    } else if (soc.test(code)) {
-      document.getElementById("discountCode").innerText = "50% off for SOC bootcampers. 🐱‍💻 Live long and code! ";
-    } else if (pineapple.test(code)) {
-      document.getElementById("discountCode").innerText =
-        "You hit the bonus pineapple pot. You get a 9 inch veg and pineapple pizza 🍍 🍕";
-    } else {
-      document.getElementById("discountCode").innerText =
-        "Code is not recognised. Please try again";
-    }
-  };
-  const pineapplesoc = new RegExp(/pineapplesoc/gi)
-  const pineapple = new RegExp(/pineapple/gi);
-  const soc = new RegExp(/soc/gi);
+   const result = applyDiscount(code)
+   setMessage(result.message)
+   setSuccessful(result.outcome)
+  }
 
+  const discountOutcome = () => {
+    if (successful) {
+      return "discountApplied"
+    } else {
+      return "discountInvalid"
+    }
+  }
 
   return (
     <div>
@@ -43,7 +44,8 @@ function Discount() {
         </label>
         <Button type="submit">Submit</Button>
       </form>
-      <p id="discountCode"> </p>
+      <p className={discountOutcome()}>{message}</p>
+
     </div>
   );
 }

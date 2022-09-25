@@ -6,7 +6,7 @@ import Money from "./Money.js";
 //find the food item by id, and then get the price out of it and multiply by quantity
 //Add the prices up using the reducer
 
-//apply the discount code to the cart - in checkout context
+//apply the discount code to the cart - in checkout context, and use the .discount to calculate discount applied. 
 
 function CheckoutTotal() {
 
