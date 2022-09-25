@@ -8,6 +8,7 @@
 //Move the list of items into a component, 
 
 import CheckoutList from "./CheckoutList.js"
+import CheckoutTotal from "./CheckoutTotal.js"
 import Discount from "./Discount.js"
 
 export default function Checkout() {
@@ -17,6 +18,7 @@ export default function Checkout() {
     <h2>Checkout</h2>
     <CheckoutList/>
     <Discount />
+    <CheckoutTotal />
 </div>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Flex, Spacer, Image, Box } from '@chakra-ui/react';
 import FoodModal from './FoodModal';
+import Money from './Money';
 
 
 export default function FoodItem({ title, image, price, id }) {
@@ -11,7 +12,7 @@ export default function FoodItem({ title, image, price, id }) {
          <h3>{title}</h3>
          <Spacer />
           <Box p='2'>
-          <p>{price}</p>
+          <p><Money number = {price} /></p>
          
           <FoodModal title={title} price={price} id={id} />
           </Box>

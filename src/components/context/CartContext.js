@@ -10,6 +10,15 @@ const useCartContext = () => {
 
 const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [discountCode, setDiscountCode] = useState("");
+
+  //create an apply discount code function, to accept an argument, uses the setCode to set the code
+  //store the validation of discount code in the context as that's where we are handling the cart
+
+  const applyDiscount = (code) => {
+    setDiscountCode(code)
+    
+  }
 
   const getNumberItems = () => cart.length;
 

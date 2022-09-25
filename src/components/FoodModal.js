@@ -12,6 +12,7 @@ import {
 
 import { useState } from "react";
 import {useCartContext} from "./context/CartContext.js"
+import Money from "./Money.js";
 
 //add quanity and id, get price from the database with the id, as price can be manipulated. 
 
@@ -39,7 +40,7 @@ export default function FoodModal({ title, price, id }) {
           <ModalCloseButton />
           <ModalBody>
             <h1>
-              Buy {title} for {price}
+              Buy {title} for <Money number = {price} />
             </h1>
           </ModalBody>
           <ModalFooter>

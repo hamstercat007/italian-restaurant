@@ -8,12 +8,11 @@ export default function FoodMenu() {
     <>
       <Text margin='10' fontSize="5xl">Menu</Text>
       {foodData.map((item) => {
-        let price="£"+(item.pricePerServing/100)
         return (
           <FoodItem
             title={item.title}
             image={item.image}
-            price={price}
+            price={item.pricePerServing}
             key={item.id}
             id={item.id}
           ></FoodItem>
