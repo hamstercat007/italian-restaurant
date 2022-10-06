@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Button } from "@chakra-ui/react";
 import { useCartContext } from "./context/CartContext";
-
 //https://www.w3schools.com/react/showreact.asp?filename=demo2_react_forms_submit
 
 function Discount() {
   const [code, setCode] = useState("");
   const [message, setMessage] = useState("")
   const {applyDiscount} = useCartContext()
-  const [successful, setSuccessful] = useState("")
+  const [successful, setSuccessful] = useState(false)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,6 +16,9 @@ function Discount() {
    setSuccessful(result.outcome)
   }
 
+
+  //show discount was successful
+  //shows class applied even at start but no message
   const discountOutcome = () => {
     if (successful) {
       return "discountApplied"
@@ -45,7 +47,7 @@ function Discount() {
         <Button type="submit">Submit</Button>
       </form>
       <p className={discountOutcome()}>{message}</p>
-
+            
     </div>
   );
 }

@@ -25,7 +25,8 @@ const CartContextProvider = ({ children }) => {
     }
   }
 
-  const getNumberItems = () => cart.length;
+  const getNumberItems = () => cart.reduce((previousValue, currentValue) => previousValue + currentValue.quantity, 0);
+
 
   //if item is present in cart identified by the id, just update the quantity,
   //if not there, add it.
